@@ -1,21 +1,12 @@
 pipeline {
-  agent {
-    node {
-      label 'test'
-    }
-
-  }
+  agent none
   stages {
     stage('') {
       steps {
-        sh '''node -v;
-echo "test"
-'''
+        sh 'ls -l'
+        sh 'echo \'test\''
       }
     }
 
-  }
-  environment {
-    sh = 'node -v'
   }
 }
